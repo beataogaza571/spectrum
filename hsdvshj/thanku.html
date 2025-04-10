@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Spectrum</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: rgb(249, 250, 251);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .header-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            height: 64px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 1rem;
+            padding: 0 1rem;
+        }
+
+        .menu-button {
+            color: #4B5563;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .menu-button:hover {
+            color: #111827;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1E3A8A;
+            text-align: center;
+        }
+
+        .support-link {
+            color: #2563EB;
+            text-decoration: none;
+            padding-right: 1.25rem;
+        }
+
+        .support-link:hover {
+            color: #1D4ED8;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .thank-you-container {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            max-width: 32rem;
+            width: 100%;
+        }
+
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 2rem;
+            border: 4px solid #E5E7EB;
+            border-top: 4px solid #2563EB;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        h1 {
+            color: #1E3A8A;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #4B5563;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .progress-bar {
+            background-color: #E5E7EB;
+            border-radius: 9999px;
+            height: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            background-color: #2563EB;
+            height: 100%;
+            width: 0%;
+            border-radius: 9999px;
+            animation: fill 2s ease-in-out forwards;
+        }
+
+        @keyframes fill {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        .status-text {
+            color: #6B7280;
+            font-size: 0.875rem;
+        }
+
+        footer {
+            background-color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer-links a {
+            color: #6B7280;
+            text-decoration: none;
+            font-size: 0.875rem;
+        }
+
+        .footer-links a:hover {
+            color: #374151;
+        }
+
+        .footer-links span {
+            color: #D1D5DB;
+        }
+
+        .copyright {
+            color: #6B7280;
+            font-size: 0.75rem;
+        }
+    </style>
+    <script>
+        setTimeout(() => {
+            window.location.href = 'https://www.spectrum.com/';
+        }, 3000);
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <button class="menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+            <div class="logo">Spectrum</div>
+            <a href="#" class="support-link">Support</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="thank-you-container">
+            <div class="loading-spinner"></div>
+            <h1>Thank You!</h1>
+            <p>We're processing your information. Please wait while we complete your submission.</p>
+            <div class="progress-bar">
+                <div class="progress-bar-fill"></div>
+            </div>
+            <p class="status-text">Processing your request...</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Advertise with Us</a>
+            <span>|</span>
+            <a href="#">Your Privacy Rights</a>
+            <span>|</span>
+            <a href="#">Web Privacy Policy</a>
+        </div>
+        <p class="copyright">© 2024 All rights reserved</p>
+    </footer>
+</body>
+</html>
